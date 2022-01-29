@@ -167,6 +167,27 @@ document.getElementById('paint-set-white').addEventListener('click', function(e)
 	return false; 
 }); 
 
+document.getElementById('paint-set-red').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7e5',character:'🟥'}); 
+	return false; 
+}); 
+
+document.getElementById('paint-set-orange').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7e7',character:'🟧'}); 
+	return false; 
+});
+
+document.getElementById('paint-set-yellow').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7e8',character:'🟨'}); 
+	return false; 
+});
+
+document.getElementById('paint-set-green').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7e9',character:'🟩'}); 
+	return false; 
+});
+
+
 document.getElementById('control-toggle-grid').addEventListener('click', function(e) {
   if(document.getElementById('canvas').className === 'noGridLines') {
     // grid was off
