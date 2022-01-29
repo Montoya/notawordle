@@ -1,0 +1,2 @@
+# notawordle
+Not a Wordle
