@@ -115,6 +115,7 @@
 
         return t;
       }(document, "script", "twitter-wjs"));
+	  document.body.addEventListener('touchmove', e.preventDefault, { passive: false });
     </script>
   </body>
 </html>
