@@ -157,6 +157,21 @@ var shouldErase = false;
 
 window.onload = function () {
 	
+document.addEventListener('dblclick', (event) => {
+    event.preventDefault()
+}, { passive: false });
+
+document.addEventListener('touchmove', (event) => {
+    event.preventDefault()
+}, { passive: false, useCapture:false });
+
+window.onresize = function() { 
+	document.body.width = window.innerWidth; 
+	document.body.height = window.innerHeight; 
+}
+
+window.onresize(); 
+
 document.getElementById('paint-set-green').className = 'icon-color selected'; 
 	
 document.getElementById('paint-set-black').addEventListener('click', function(e) { 

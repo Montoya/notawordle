@@ -3,6 +3,17 @@ body {
   display:table;
   width:100vw;
   height:100vh;
+  margin:0; 
+  padding:0; 
+  touch-action:manipulation; 
+}
+html, body { 
+  overflow:hidden; 
+  position:fixed; 
+}
+:root {
+  touch-action: pan-x pan-y;
+  height: 100% 
 }
 header {
   background-color:#34ace0;
