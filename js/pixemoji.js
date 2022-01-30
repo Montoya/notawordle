@@ -231,6 +231,15 @@ document.getElementById('paint-set-purple').addEventListener('click', function(e
 	return false; 
 });
 
+document.getElementById('paint-set-brown').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7eb',character:'🟫'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
+	return false; 
+});
+
 
 document.getElementById('control-toggle-grid').addEventListener('click', function(e) {
   if(document.getElementById('canvas').className === 'noGridLines') {
