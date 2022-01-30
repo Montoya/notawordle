@@ -157,33 +157,77 @@ var shouldErase = false;
 
 window.onload = function () {
 	
+document.getElementById('paint-set-green').className = 'icon-color selected'; 
+	
 document.getElementById('paint-set-black').addEventListener('click', function(e) { 
 	setActiveEmoji({unicode:'2b1b',character:'⬛'}); 
+	while(el = document.querySelector('.icon-color.selected')){ 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
 	return false; 
 }); 
 
 document.getElementById('paint-set-white').addEventListener('click', function(e) { 
 	setActiveEmoji({unicode:'2b1c',character:'⬜'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
 	return false; 
 }); 
 
 document.getElementById('paint-set-red').addEventListener('click', function(e) { 
-	setActiveEmoji({unicode:'1f7e5',character:'🟥'}); 
+	setActiveEmoji({unicode:'1f7e5',character:'🟥'});
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 	
 	return false; 
 }); 
 
 document.getElementById('paint-set-orange').addEventListener('click', function(e) { 
 	setActiveEmoji({unicode:'1f7e7',character:'🟧'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
 	return false; 
 });
 
 document.getElementById('paint-set-yellow').addEventListener('click', function(e) { 
 	setActiveEmoji({unicode:'1f7e8',character:'🟨'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
 	return false; 
 });
 
 document.getElementById('paint-set-green').addEventListener('click', function(e) { 
 	setActiveEmoji({unicode:'1f7e9',character:'🟩'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
+	return false; 
+});
+
+document.getElementById('paint-set-blue').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7e6',character:'🟦'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
+	return false; 
+});
+
+document.getElementById('paint-set-purple').addEventListener('click', function(e) { 
+	setActiveEmoji({unicode:'1f7ea',character:'🟪'}); 
+	while(el = document.querySelector('.icon-color.selected')) { 
+		el.className = "icon-color"; 
+	}
+	e.target.className = "icon-color selected"; 
 	return false; 
 });
 
@@ -247,7 +291,7 @@ document.getElementById('share-button').addEventListener('click', function(e) {
 
   var art = copyCells();
 
-  document.getElementById('hidden-textarea').value = ''+art+"\n\nMade with PixEmoji";
+  document.getElementById('hidden-textarea').value = ''+art+"\n\n#NotaWordle, Just Art";
 
   var twitterButton = document.getElementById('twitter-share');
   emptyNode(twitterButton);
@@ -256,7 +300,7 @@ document.getElementById('share-button').addEventListener('click', function(e) {
     twitterButton,
     {
       count: 'none',
-      text: ''+art+"\n\n"+"Made with PixEmoji",
+      text: ''+art+"\n\n"+'#NotaWordle, Just Art'+"\n",
       size: 'large'/*,
       via: 'm0nt0y4'*/
     }).then(function (el) {

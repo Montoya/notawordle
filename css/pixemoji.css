@@ -117,7 +117,13 @@ a:visited {
 	top:-2px; 
 }
 #canvas-footer i.inactive {
-	opacity:0.4;
+	opacity:0.5;
+}
+#canvas-footer span.icon-color { 
+	opacity:0.5; 
+}
+#canvas-footer span.icon-color.selected { 
+	opacity:1; 
 }
 #canvas .cell {
 	display:inline-block;
@@ -185,4 +191,16 @@ a:visited {
 
 .EmojiPanel__brand {
 	visibility:hidden;
+}
+
+@media (min-width: 450px) and (min-height: 600px) {
+  #interface {
+    zoom: 1.25;
+  }
+}
+
+@media (min-width: 600px) and (min-height: 800px) {
+  #interface {
+    zoom: 1.5;
+  }
 }
