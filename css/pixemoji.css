@@ -203,7 +203,7 @@ a:visited {
 .EmojiPanel__brand {
 	visibility:hidden;
 }
-
+/*
 @media (min-width: 450px) and (min-height: 600px) {
   #interface {
     zoom: 1.25;
@@ -215,3 +215,4 @@ a:visited {
     zoom: 1.5;
   }
 }
+*/
