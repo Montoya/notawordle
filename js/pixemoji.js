@@ -327,7 +327,7 @@ document.getElementById('share-button').addEventListener('click', function(e) {
 
   var art = copyCells();
 
-  document.getElementById('hidden-textarea').value = ''+art+"\n\n#NotaWordle, Just Art";
+  document.getElementById('hidden-textarea').value = ''+art+"\n\nNot a Wordle, Just Art\n\nhttps://homerow.club/notawordle/";
 
   var twitterButton = document.getElementById('twitter-share');
   emptyNode(twitterButton);
@@ -336,7 +336,7 @@ document.getElementById('share-button').addEventListener('click', function(e) {
     twitterButton,
     {
       count: 'none',
-      text: ''+art+"\n\n"+'#NotaWordle, Just Art'+"\n",
+      text: ''+art+"\n\n"+'Not a Wordle, Just Art'+"\n\n"+'https://homerow.club/notawordle/'+"\n",
       size: 'large'/*,
       via: 'm0nt0y4'*/
     }).then(function (el) {
