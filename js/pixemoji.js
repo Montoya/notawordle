@@ -160,17 +160,29 @@ window.onload = function () {
 document.addEventListener('dblclick', (event) => {
     event.preventDefault()
 }, { passive: false });
-
+/*
 document.addEventListener('touchmove', (event) => {
     event.preventDefault()
 }, { passive: false, useCapture:false });
-
+*/
 window.onresize = function() { 
 	document.body.width = window.innerWidth; 
 	document.body.height = window.innerHeight; 
 }
 
 window.onresize(); 
+
+document.getElementById('canvas').addEventListener('touchmove', function(e) { 
+	// get the touch element
+    var touch = e.touches[0];
+	
+	// get the DOM element
+    var cell = document.elementFromPoint(touch.clientX, touch.clientY);
+	
+	if(cell && cell.className == "cell") { 
+		cellOver(cell); 
+	}
+}); 
 
 document.getElementById('paint-set-green').className = 'icon-color selected'; 
 	
@@ -376,7 +388,13 @@ for(var i = 0;i < shareModalCloseButtons.length;i++) {
 document.addEventListener('mousedown',function(e) {
   drawingEnabled = true;
 });
+document.addEventListener('touchstart',function(e) {
+  drawingEnabled = true;
+});
 document.addEventListener('mouseup',function(e) {
+  drawingEnabled = false;
+});
+document.addEventListener('touchend',function(e) {
   drawingEnabled = false;
 });
 window.addEventListener('blur',function() {
